@@ -28,6 +28,10 @@ int main(int argc, char **argv) {
 
         } catch (const std::exception& e) {
             cout << "if test block failure " << e.what() << endl;
+        } else try {
+
+        } catch (const std::exception& e) {
+            cerr << e.what() << endl;
         }
 
     } catch (const exception& e) {
