@@ -22,6 +22,14 @@ int main(int argc, char **argv) {
         TestDelegate d;
         Base b(&d);
 
+        if(true) try {
+
+            throw std::runtime_error("test fuck");
+
+        } catch (const std::exception& e) {
+            cout << "if test block failure " << e.what() << endl;
+        }
+
     } catch (const exception& e) {
         cerr << e.what() << endl;
     }
